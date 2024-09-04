@@ -348,6 +348,13 @@ public class ConfluenceConverter implements ConfluenceReferenceConverter
         return new EntityReference(convertedSpace, EntityType.SPACE, root);
     }
 
+    /**
+     * Converts a page ID into and EntityReference.
+     *
+     * @param pageId confluence id of the page
+     * @param asSpace if you want the reference as a space
+     * @return a valid XWiki reference or null
+     */
     public EntityReference convertDocumentReference(long pageId, boolean asSpace)
     {
         try {
