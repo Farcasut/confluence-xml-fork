@@ -109,7 +109,7 @@ public class ConfluenceConverter implements ConfluenceReferenceConverter
         + "in this Confluence export, or the page is missing";
 
     private static final String COULD_NOT_GET_THE_PROPERTIES_OF_A_PAGE_WITH_RESOLVING_PARENT =
-        "Could not get the properties of a page with resolving @parent.";
+        "Could not get the properties of a page while resolving @parent.";
 
     @Inject
     private EntityReferenceSerializer<String> entityReferenceSerializer;
@@ -563,6 +563,8 @@ public class ConfluenceConverter implements ConfluenceReferenceConverter
     }
     private String resolveHomeSpaceKey(String spaceKey)
     {
+
+
 
         Long currentPageId = context.getCurrentPage();
         ConfluenceXMLPackage confluencePackage = context.getConfluencePackage();
